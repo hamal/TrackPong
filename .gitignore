@@ -1,2 +1,4 @@
-/client/views/*.js
-/client/views/*.map
+*.js
+*.map
+*.css
+*.DS_Store

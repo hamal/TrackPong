@@ -6,9 +6,8 @@
 class @PlayersController extends RouteController
   template: 'playersMain'
   fastRender: true
-  waitOn: ->
-
-  data: ->
+  # waitOn: ->
+  # data: ->
 
 
 console.log "Router: configured #{PlayersController.name}"
@@ -36,19 +35,20 @@ Template.playersMain.settings = ->
     {
       collection: Players
       field: "username"
-      template: Template.userDropdown
-      noMatchTemplate: ""
+      matchAll: true
+      template: Template.userPill
+      # noMatchTemplate: ""
     }
-    {
-      collection: Players
-      field: "name"
-      template: Template.userDropdown
-      noMatchTemplate: ""
-    }
-    {
-      collection: Players
-      field: "surname"
-      template: Template.userDropdown
-      noMatchTemplate: ""
-    }
+    # {
+    #   collection: Players
+    #   field: "name"
+    #   template: Template.userPill
+    #   noMatchTemplate: ""
+    # }
+    # {
+    #   collection: Players
+    #   field: "surname"
+    #   template: Template.userPill
+    #   noMatchTemplate: ""
+    # }
   ]
