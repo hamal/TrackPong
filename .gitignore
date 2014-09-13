@@ -1,3 +1,2 @@
-.meteor/local
-.meteor/meteorite
-.DS_Store
+/client/views/*.js
+/client/views/*.map
