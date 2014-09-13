@@ -1,3 +1,7 @@
 <template name="matchMain">
-  match
+  {{#with match}}
+    <h1>{{playerOne}} vs. {{playerTwo}}</h1>
+    <p>{{scoreOne}} --- {{scoreTwo}}</p>
+    {{time}}
+  {{/with}}
 </template>

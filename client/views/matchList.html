@@ -1,0 +1,8 @@
+<template name="matchListMain">
+  {{#each matches}}
+    <p>
+      {{timestamp}} - {{playerOne}} {{scoreOne}} - {{playerTwo}} {{scoreTwo}}
+      <a href="{{pathFor 'matchRoute'}}">details</a>
+    </p>
+  {{/each}}
+</template>

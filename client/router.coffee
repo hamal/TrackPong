@@ -2,14 +2,14 @@
 
 # Router main template
 Router.configure
-  layoutTemplate: 'layoutMain'
+  # layoutTemplate: 'layoutMain'
   notFoundTemplate: 'fourZeroFour'
   # loadingTemplate: 'loading'
   # render the template named header to the 'header' yield
   # waitOn: null => the header has not to wait the subscriptions but has to be rendered immediately
-  yieldTemplates:
-    'headerMain': {to: 'header', waitOn : null}
-    'footerMain': {to: 'footer'}
+  # yieldTemplates:
+  #   'headerMain': {to: 'header', waitOn : null}
+  #   'footerMain': {to: 'footer'}
 
 # Router.onBeforeAction('dataNotFound')
 
@@ -17,9 +17,11 @@ Router.configure
 Router.map ->
   # Landing page
   @route 'indexRoute', path: '/', controller: 'IndexController'
-  @route 'profileRoute', path: '/u', controller: 'ProfileController'
-  @route 'playRoute', path: '/play', controller: 'PlayController'
-  @route 'matchRoute', path: '/match', controller: 'MatchController'
+  @route 'playersRoute', path: '/players', controller: 'PlayersController'
+  @route 'matchRoute', path: '/match/:_id', controller: 'MatchController'
+
+  @route 'matchListRoute', path: '/match', controller: 'MatchListController'
+  @route 'profileRoute', path: '/u/:username', controller: 'ProfileController'
   @route 'leaderRoute', path: '/leaderboard', controller: 'LeaderController'
 
 # Configure the progress bar
