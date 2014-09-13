@@ -2,8 +2,8 @@
 
 # Router main template
 Router.configure
-  # layoutTemplate: 'layoutMain'
-  notFoundTemplate: 'fourZeroFour'
+  layoutTemplate: 'layoutMain'
+  # notFoundTemplate: 'fourZeroFour'
   # loadingTemplate: 'loading'
   # render the template named header to the 'header' yield
   # waitOn: null => the header has not to wait the subscriptions but has to be rendered immediately
