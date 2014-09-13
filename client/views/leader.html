@@ -1,3 +1,7 @@
 <template name="leaderMain">
-  leader
+  {{#each players}}
+    <p><a href="{{pathFor 'profileRoute'}}">
+      {{score}} - {{username}} - {{name}} {{surname}}
+    </a></p>
+  {{/each}}
 </template>

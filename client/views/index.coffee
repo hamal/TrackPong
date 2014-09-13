@@ -16,5 +16,9 @@ console.log "Router: configured #{IndexController.name}"
 ### RENDERED ###
 
 ### EVENTS ###
+Template.indexMain.events
+  'click #play': ->
+    # Create a new match
+    # Redirect to playRoute with the match created
 
 ### HELPERS ###

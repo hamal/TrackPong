@@ -1,3 +1,16 @@
 <template name="profileMain">
-  profile
+  {{#with player}}
+  <h1>
+    {{name}} {{surname}}
+  </h1>
+  <p>
+    username: {{username}}
+  </p>
+  <p>
+    device: {{deviceId}}
+  </p>
+  <p>
+    score: {{score}}
+  </p>
+  {{/with}}
 </template>

@@ -7,9 +7,10 @@ meteor-platform
 iron:router
 mrt:iron-router-progress
 zimme:iron-router-active
-accounts-facebook
 coffeescript
 less
-accounts-twitter
 mrt:moment
+mrt:normalize.css
+natestrauser:animate-css
+mizzao:autocomplete
 
