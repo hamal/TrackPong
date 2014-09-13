@@ -1,12 +1,17 @@
 <template name="indexMain">
-  Welcome in TrackPong
-  <p>
-    <a href="{{pathFor 'playersRoute'}}">Play now!</a>
-  </p>
-  <p>
-    <a href="{{pathFor 'leaderRoute'}}">Leaderboard</a>
-  </p>
-  <p>
-    <a href="{{pathFor 'matchListRoute'}}">Last Matches</a>
-  </p>
+    <div class="container-full">
+        <div class="text-center">
+            <div class="ball"></div>
+            <div class="netGrid"></div>
+            <div>
+                <a href="{{pathFor 'playersRoute'}}" class="button-match">LET'S MATCH</a>
+            </div>
+            <div>
+                <a href="{{pathFor 'leaderRoute'}}" class="button-leaderboard">LEADERBOARD</a>
+            </div>
+        </div>
+    </div>
+    <!-- <p>
+         <a href="{{pathFor 'matchListRoute'}}">Last Matches</a>
+     </p>-->
 </template>
