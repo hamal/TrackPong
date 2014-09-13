@@ -1,0 +1,23 @@
+<template name="layoutMain">
+  <head>
+    <meta charset="utf-8" />
+    <title>Your wearable companion for table tennis - TrackPong</title>
+    <meta name="description" content="Table tennis predictor to be used with Empatica E3 wristband." />
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="fragment" content="!"> -->
+
+    <link href="/favicon.ico" rel="icon" type="image/png" />
+  </head>
+
+  <!-- Header -->
+  {{> yield region='header'}}
+
+  <main>
+      <!-- Main content -->
+      {{> yield}}
+  </main>
+
+  <!-- Footer -->
+  {{> yield region='footer'}}
+</template>

@@ -4,5 +4,12 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
+iron:router
+mrt:iron-router-progress
+zimme:iron-router-active
+accounts-facebook
+coffeescript
+less
+accounts-twitter
+mrt:moment
+
