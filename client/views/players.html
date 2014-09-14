@@ -1,19 +1,13 @@
 <template name="playersMain">
-  {{> inputAutocomplete settings=settings id="playerOne" placeholder="Player 1"}}
-  {{> inputAutocomplete settings=settings id="playerTwo" placeholder="Player 2"}}
+  <input id="playerOne" class="typeahead" name="player one" type="text"
+       placeholder="Player One"
+       autocomplete="off" spellcheck="off"
+       data-source="players"/>
 
-  <p>
-    Player 1: {{playerOne}}
-  </p>
-  <p>
-    Player 2: {{playerTwo}}
-  </p>
+  <input id="playerTwo" class="typeahead" name="player two" type="text"
+       placeholder="Player Two"
+       autocomplete="off" spellcheck="off"
+       data-source="players"/>
 
   <a href="#" id="new-match">Match!</a>
-</template>
-
-<template name="userPill">
-  <p>
-    {{username}} - {{name}} {{surname}}
-  </p>
 </template>

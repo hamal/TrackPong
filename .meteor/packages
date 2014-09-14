@@ -10,7 +10,8 @@ zimme:iron-router-active
 coffeescript
 less
 mrt:moment
-mrt:normalize.css
 natestrauser:animate-css
 mizzao:autocomplete
+mrt:normalize.css
+sergeyt:typeahead
 
