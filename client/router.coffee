@@ -1,8 +1,8 @@
 ### ROUTING ###
 
 # Router main template
-Router.configure
-  layoutTemplate: 'layoutMain'
+# Router.configure
+  # layoutTemplate: 'layoutMain'
   # notFoundTemplate: 'fourZeroFour'
   # loadingTemplate: 'loading'
   # render the template named header to the 'header' yield
