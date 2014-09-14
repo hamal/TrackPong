@@ -1,18 +1,18 @@
 <template name="indexMain">
-    <div class="container-full">
-        <div class="text-center">
-            <div class="netGrid"></div>
-
-            <div class="ball"></div>
-            <div>
-                <a href="{{pathFor 'playersRoute'}}" class="button-match">LET'S MATCH</a>
-            </div>
-            <div>
-                <a href="{{pathFor 'leaderRoute'}}" class="button-leaderboard">LEADERBOARD</a>
-            </div>
+    <div class="container-full netBackground">
+        <div class="ball"></div>
+        <div class="row text-center">
+            <img width="400px" style="margin-top: 50px" src="/logo.png">
+        </div>
+        <div class="row emptySpace"></div>
+        <div class="row text-center">
+            <a href="{{pathFor 'playersRoute'}}" class="button-match">LET'S MATCH</a>
+        </div>
+        <div class="row text-center">
+            <a href="{{pathFor 'leaderRoute'}}" class="button-leaderboard">LEADERBOARD</a>
+        </div>
+        <div class="row text-center">
+            <a href="{{pathFor 'leaderRoute'}}" class="button-last-matches">LAST MATCHES</a>
         </div>
     </div>
-    <!-- <p>
-         <a href="{{pathFor 'matchListRoute'}}">Last Matches</a>
-     </p>-->
 </template>
