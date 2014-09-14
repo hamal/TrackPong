@@ -20,3 +20,10 @@ console.log "Router: configured #{MatchController.name}"
 
 
 ### HELPERS ###
+getData = (rawData) ->
+  pieces = rawData.split(" ")
+  return null  if not pieces or pieces.length <= 3
+  new
+  kind: pieces[0]
+  timestamp: pieces[1]
+  value: pieces[2]
