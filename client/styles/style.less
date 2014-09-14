@@ -2,6 +2,9 @@
 @yellow: #F5A623;
 @red: #D0021B;
 @green: #00718B;
+@orange: #e37550;
+@purple : #9831CA;
+@darkPurple : #5D285F;
 
 #iron-router-progress {
   background-color: @yellow;
@@ -39,7 +42,7 @@ body {
   height: 10%;
 }
 
-.button(@fontSize, @backgroundColor, @leftPosition, @topPosition) {
+.button(@fontSize, @backgroundColor) {
   font-size: @fontSize;
   background-color: @backgroundColor;
   color: white;
@@ -47,6 +50,7 @@ body {
   border: 6px solid white;
   padding: 0px 20px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .background {
@@ -65,45 +69,40 @@ body {
   left: 0;
 }
 
-.ball {
-  background-color: #ffffff;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: fixed;
-  top: 20%;
-  left: 30%;
+.netBackground {
+  background: url(./rete.png) no-repeat center;
 }
 
-.netBackground {
-  background: url(/rete.png) no-repeat center;
+.leaderboardBackground{
+  background: url(../public/leaderboard.png) no-repeat center;
+  background-size: 105%;
 }
 
 .button-match {
-  .button(214%, @red, 40%, 60%);
-
+  .button(214%, @red);
 }
 
 .button-leaderboard {
-  .button(214%, @yellow, 41%, 75%);
+  .button(214%, @yellow);
 
 }
 
 .button-last-matches {
-  .button(214%, @green, 10%, 85%);
+  .button(214%, @green);
 }
 
 .userPicture {
-  border-radius: 40px;
-  height: 100px;
+  border-radius: 70px;
+  height: 140px;
+  border: 4px white solid;
 }
 
 .playerNameLeft {
-  .userName(#E37550);
+  .userName(@orange);
 }
 
 .playerNameRight {
-  .userName(#9831CA);
+  .userName(@purple);
 }
 
 .playerMatchDetailLeft {
@@ -111,5 +110,81 @@ body {
 }
 
 .playerMatchDetailRight {
-  .playerMatchDetail(200px, #5D285F);
+  .playerMatchDetail(200px, @darkPurple);
+}
+
+.button-lets-play {
+  .button(300%, @red);
+  margin-top: 30px;
+}
+
+.user-picture-match-left {
+  display: inline;
+  width: 300px;
+  background-color: @orange;
+  border: 2px white solid;
+  padding: 5px 80px 5px 100px;
+  margin-right: -390px;
+  margin-left: -10px;
+  font-weight: 800;
+  color: white;
+  font-size: 35px;
+}
+
+.user-picture-match-right {
+  display: inline;
+  width: 300px;
+  background-color: @purple;
+  border: 2px white solid;
+  padding: 5px 80px 5px 100px;
+  margin-right: 174px;
+  margin-left: -482px;
+  font-weight: 800;
+  color: white;
+  font-size: 35px;
+}
+
+.score {
+  font-size: 150px;
+  color: lightgrey;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.buttonChangeScore(@backgroundColor) {
+  background-color: @backgroundColor;
+  color: white;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  border: 2px white solid;
+  font-size: 30px;
+
+}
+
+.buttonPlusRight {
+  .buttonChangeScore(@purple);
+  margin: 60px 0 0px -110px;
+}
+
+.buttonMinusLeft {
+  .buttonChangeScore(grey);
+  margin: 60px 0 0px 80px;
+}
+
+.buttonMinusRight {
+  .buttonChangeScore(@darkPurple);
+  margin: 60px 0 0px 110px;
+}
+
+.buttonPlusLeft {
+  .buttonChangeScore(@orange);
+  margin: 60px 0 0px -190px;
+}
+
+.winBarContainer {
+  width: 70%;
+  background: lightgrey;
+  margin: auto;
+  border: 5px white solid;
+  border-radius: 70px;
 }

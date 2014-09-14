@@ -1,7 +1,47 @@
 <template name="matchMain">
-  {{#with match}}
-    <h1>{{playerOne}} vs. {{playerTwo}}</h1>
-    <p>{{scoreOne}} --- {{scoreTwo}}</p>
-    {{time}}
-  {{/with}}
+  <div class="container-full netBackground">
+    {{#with match}}
+      <div class="row text-center" style="margin-top: 20px">
+          <div class="col-sm-4">
+              <img class="userPicture" src="/user1.jpg">
+              <div class="user-picture-match-left">{{playerOne}}</div>
+              <button name="button" id="player-one-connect">Connect Player One</button>
+          </div>
+          <div class="col-sm-4" style="z-index:9999">
+              <img width="250px" src="/racchette.png">
+          </div>
+          <div class="col-sm-4">
+              <img class="userPicture" src="/user2.jpg">
+              <div class="user-picture-match-right">{{playerTwo}}</div>
+              <button name="button" id="player-two-connect">Connect Player Two</button>
+          </div>
+      </div>
+      <div class="row text-center" style="margin-top: 10px">
+          <div class="col-sm-1"><button class="buttonMinusLeft">-</button></div>
+          <div class="col-sm-4"><div class="score">{{scoreOne}}</div></div>
+          <div class="col-sm-1"><button class="buttonPlusLeft">+</button></div>
+          <div class="col-sm-1"><button class="buttonMinusRight">-</button></div>
+          <div class="col-sm-4"><div class="score">{{scoreTwo}}</div></div>
+          <div class="col-sm-1"><button class="buttonPlusRight">+</button></div>
+      </div>
+      {{/with}}
+
+      <div class="row">
+          <div class="col-sm-6" >
+            avgBvp: {{avgBvpPlayerOne}}
+            avgGsr: {{avgGsrPlayerOne}}
+            avgTmp: {{avgTmpPlayerOne}}
+          </div>
+          <div class="col-sm-6" >
+            avgBvp: {{avgBvpPlayerTwo}}
+            avgGsr: {{avgGsrPlayerTwo}}
+            avgTmp: {{avgTmpPlayerTwo}}
+          </div>
+      </div>
+      <div class="row text-center" style="margin-top: 70px">
+          <div class="winBarContainer">
+              <img src="/empatica.png" height="100px" style="margin-top: -18px">
+          </div>
+      </div>
+  </div>
 </template>

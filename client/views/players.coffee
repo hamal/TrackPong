@@ -6,8 +6,10 @@
 class @PlayersController extends RouteController
   template: 'playersMain'
   fastRender: true
-  # waitOn: ->
+  waitOn: ->
+    Meteor.subscribe 'playersPub'
   # data: ->
+  #   players: P
   # onBeforeAction: -
 
 console.log "Router: configured #{PlayersController.name}"

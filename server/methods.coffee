@@ -5,8 +5,10 @@ Meteor.methods
     matchId = Matches.insert
       timestamp: moment().toISOString()
       playerOne: playerOne
+      deviceIdOne: Players.findOne(username: playerOne).deviceId
       scoreOne: 0
       playerTwo: playerTwo
+      deviceIdTwo: Players.findOne(username: playerTwo).deviceId
       scoreTwo: 0
       state: 'ongoing'
     console.log "Inserted match: #{matchId}"
