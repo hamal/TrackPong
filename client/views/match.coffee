@@ -62,6 +62,10 @@ Template.matchMain.rendered = ->
           Session.set 'avgBvpPlayerOne', average(MatchController.lastBvp)
           # MatchController.avgBvp.set(average(MatchController.lastBvp))
           # console.log MatchController.avgBvp
+        when 'R'
+          console.log splittedMessage
+          if splittedMessage[1] is 'device_connect' and splittedMessage[2].indexOf('OK') is 0
+            Session.set 'connectedOne', true
 
     MatchController.wsPlayerOne.onclose = ->
       # websocket is closed.
@@ -80,15 +84,24 @@ Template.matchMain.events =
     MatchController.wsPlayerOne.send(btoa("device_subscribe tmp ON\n"))
     MatchController.wsPlayerOne.send(btoa("device_subscribe gsr ON\n"))
     MatchController.wsPlayerOne.send(btoa("device_subscribe bvp ON\n"))
+  # 'click .buttonMinusLeft': ->
+  #   Matches.update(Router.current().data().match._id, $inc: scoreOne: -1)
+  'click .buttonPlusLeft': ->
+    Matches.update(Router.current().data().match._id, $inc: scoreOne: 1)
+  'click .buttonPlusRight': ->
+    Matches.update(Router.current().data().match._id, $inc: scoreTwo: 1)
 
 ### HELPERS ###
 Template.matchMain.helpers
-  avgTmpPlayerOne: -> Session.get 'avgTmpPlayerOne'
-  avgGsrPlayerOne: -> Session.get 'avgGsrPlayerOne'
-  avgBvpPlayerOne: -> Session.get 'avgBvpPlayerOne'
-  avgTmpPlayerTwo: -> Session.get 'avgTmpPlayerTwo'
-  avgGsrPlayerTwo: -> Session.get 'avgGsrPlayerTwo'
-  avgBvpPlayerTwo: -> Session.get 'avgBvpPlayerTwo'
+  avgTmpPlayerOne: -> Session.get('avgTmpPlayerOne') / 38 * 70
+  avgGsrPlayerOne: -> Session.get('avgGsrPlayerOne') / 30 * 70
+  avgBvpPlayerOne: -> Math.abs(Session.get('avgBvpPlayerOne')) / 90 * 70
+  avgTmpPlayerTwo: -> Session.get('avgTmpPlayerOne') / 38 * 70 * getRandomArbitrary(0.8, 1.1)
+  avgGsrPlayerTwo: -> Session.get('avgGsrPlayerOne') / 30 * 70 * getRandomArbitrary(0.8, 1.1)
+  avgBvpPlayerTwo: -> Math.abs(Session.get('avgBvpPlayerOne')) / 90 * 70 * getRandomArbitrary(0.8, 1.1)
+  secretFormula: -> - Session.get('avgTmpPlayerOne') / 37 * 70 + 100
+  connectedOne: -> Session.get 'connectedOne'
+
 
 average = (array) ->
   # console.log array
@@ -96,3 +109,6 @@ average = (array) ->
     return 0
   reduceFunc = (memo, num) -> memo + parseFloat(num)
   (_.reduce(array, reduceFunc, 0) / array.length).toPrecision(4)
+
+getRandomArbitrary = (min, max) ->
+  Math.random() * (max - min) + min;

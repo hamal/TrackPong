@@ -73,7 +73,7 @@ body {
   background: url(./rete.png) no-repeat center;
 }
 
-.leaderboardBackground{
+.leaderboardBackground {
   background: url(../public/leaderboard.png) no-repeat center;
   background-size: 105%;
 }
@@ -124,8 +124,6 @@ body {
   background-color: @orange;
   border: 2px white solid;
   padding: 5px 80px 5px 100px;
-  margin-right: -390px;
-  margin-left: -10px;
   font-weight: 800;
   color: white;
   font-size: 35px;
@@ -137,8 +135,6 @@ body {
   background-color: @purple;
   border: 2px white solid;
   padding: 5px 80px 5px 100px;
-  margin-right: 174px;
-  margin-left: -482px;
   font-weight: 800;
   color: white;
   font-size: 35px;
@@ -187,4 +183,48 @@ body {
   margin: auto;
   border: 5px white solid;
   border-radius: 70px;
+}
+
+.connectPlayer1 {
+  background-color: @orange;
+  border: 2px white solid;
+  color: white;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.connectPlayer2 {
+  background-color: @purple;
+  border: 2px white solid;
+  color: white;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.dataValue(@color) {
+  width: 50%;
+  background: @color;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px white solid;
+  margin-top: 4px;
+}
+
+.dataValue1 {
+  .dataValue(@red);
+}
+
+.dataValue2 {
+  .dataValue(@green);
+}
+
+.dataValue3 {
+  .dataValue(@yellow);
+}
+
+.dataTitle {
+  font-weight: bold;
+  color: white;
 }

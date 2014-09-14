@@ -1,17 +1,117 @@
 <template name="playersMain">
-  <input id="playerOne" class="typeahead" name="player one" type="text"
-       placeholder="Player One"
-       autocomplete="off" spellcheck="off"
-       data-source="players"/>
 
-  <input id="playerTwo" class="typeahead" name="player two" type="text"
-       placeholder="Player Two"
-       autocomplete="off" spellcheck="off"
-       data-source="players"/>
+  <div class="container-full netBackground">
+      <div class="row text-center" style="margin-top: 20px">
+          <div class="col-sm-4">
+              <img class="userPicture" src="/user1.jpg">
+          </div>
+          <div class="col-sm-4">
+              <img width="250px" src="/racchette.png">
+          </div>
+          <div class="col-sm-4">
+              <img class="userPicture" src="/user2.jpg">
+          </div>
+      </div>
+      <div class="row text-center">
+          <div class="col-sm-4">
+              <div class="playerInfo">
+                  <div class="row">
+                    <input id="playerOne" class="typeahead playerNameLeft" name="player one" type="text"
+                         placeholder="Player One"
+                         autocomplete="off" spellcheck="off"
+                         data-source="players"/>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          LEVEL1
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          E3 NUMBER 2
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          CONNECTED
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <!-- <img src="/logo.png" style="margin-top: 30px;" width="350px"> -->
+          </div>
+          <div class="col-sm-4">
+              <div class="playerInfo">
+                <input id="playerTwo" class="typeahead playerNameRight" name="player two" type="text"
+                     placeholder="Player Two"
+                     autocomplete="off" spellcheck="off"
+                     data-source="players"/>
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          LEVEL2
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          E3 NUMBER 2
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          CONNECTED
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row text-center" style="margin-top: 40px">
+          <div class="col-sm-4">
+              <div class="playerInfo">
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          32 games played
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          12 games won
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailLeft">
+                          20 games lost
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <button id="new-match" class="button-lets-play">LET'S PLAY</button>
+          </div>
+          <div class="col-sm-4">
+              <div class="playerInfo">
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          5 games played
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          2 games won
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="playerMatchDetailRight">
+                          3 games lost
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-  <button id="new-match">Match!</button>
 
-  <p>
+  <!-- <p>
     <input id="username" name="" type="text"
          placeholder="Username"
          autocomplete="off" spellcheck="off" />
@@ -25,5 +125,5 @@
          placeholder="E3 Device Id"
          autocomplete="off" spellcheck="off" />
     <button name="New User" id="new-user">Create</button>
-  </p>
+  </p> -->
 </template>
