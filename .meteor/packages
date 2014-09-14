@@ -12,6 +12,7 @@ less
 mrt:moment
 natestrauser:animate-css
 mizzao:autocomplete
-mrt:normalize.css
 sergeyt:typeahead
+mrt:normalize.css
+mizzao:bootstrap-3
 
